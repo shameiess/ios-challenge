@@ -20,4 +20,22 @@
     return self;
 }
 
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super init];
+    if (self) {
+        self.bronze = [coder decodeIntForKey:@"bronze"];
+        self.silver = [coder decodeIntForKey:@"silver"];
+        self.gold = [coder decodeIntForKey:@"gold"];
+    }
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)coder
+{
+    [coder encodeInt:self.bronze forKey:@"bronze"];
+    [coder encodeInt:self.silver forKey:@"silver"];
+    [coder encodeInt:self.gold forKey:@"gold"];
+}
+
 @end

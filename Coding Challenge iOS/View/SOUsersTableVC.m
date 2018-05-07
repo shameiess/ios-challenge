@@ -10,6 +10,9 @@
 #import "SOUser.h"
 #import "StackOverflowAPI.h"
 #import "SOUserCell.h"
+#import "AppDelegate.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "Persist.h"
 
 static NSString *const SOUserCellIdentifier = @"SOUserCell";
 
@@ -28,6 +31,7 @@ static NSString *const SOUserCellIdentifier = @"SOUserCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tableView registerNib:[UINib nibWithNibName:@"SOUserCell" bundle:nil] forCellReuseIdentifier:SOUserCellIdentifier];
+    self.tableView.rowHeight = 100;
     
     // Pull to Refresh
     self.refreshControl = [[UIRefreshControl alloc] init];
@@ -43,11 +47,20 @@ static NSString *const SOUserCellIdentifier = @"SOUserCell";
 
 - (void)fetchStackOverFlowUsersFeed {
     [[StackOverflowAPI api] fetchStackOverFlowUsersFeed:^(NSArray<SOUser *> *users, NSError *error) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self.users = [users mutableCopy];
-            [self.table reloadData];
-            [self.refreshControl endRefreshing];
-        });
+        if (error) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+            	self.users = [[Persist fetchUsers] mutableCopy];
+                [self.tableView reloadData];
+                [self.refreshControl endRefreshing];
+            });
+        } else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.users = [users mutableCopy];
+                [Persist saveSOUsers:users];
+                [self.table reloadData];
+                [self.refreshControl endRefreshing];
+            });
+        }
     }];
 }
 
@@ -57,7 +70,7 @@ static NSString *const SOUserCellIdentifier = @"SOUserCell";
 
 - (void)configureUserCell:(SOUserCell *)cell withUser:(SOUser *)user {
     cell.name.text = user.displayName;
-    cell.imageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:user.profileImage]]];
+    [cell.profileImageView sd_setImageWithURL:[NSURL URLWithString:user.profileImage] placeholderImage:[UIImage imageNamed:@"defaultPhoto.png"]];
     cell.goldCount.text = [NSString stringWithFormat:@"%d", user.badgeCount.gold];
     cell.silverCount.text = [NSString stringWithFormat:@"%d", user.badgeCount.silver];
     cell.bronzeCount.text = [NSString stringWithFormat:@"%d", user.badgeCount.bronze];
@@ -82,7 +95,6 @@ static NSString *const SOUserCellIdentifier = @"SOUserCell";
         cell = [[SOUserCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:SOUserCellIdentifier];
     }
     [self configureUserCell:cell withUser:user];
-
     return cell;
 }
 

@@ -24,9 +24,10 @@
 - (void)fetchStackOverFlowUsersFeed:(void (^)(NSArray<SOUser *> *, NSError *error))completion {
     static NSString *kBaseUrl = @"https://api.stackexchange.com/2.2/users?site=stackoverflow";
     
-    [[NSURLSession.sharedSession dataTaskWithURL:[NSURL URLWithString:kBaseUrl] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        if (error) {
+    [[NSURLSession.sharedSession dataTaskWithURL:[NSURL URLWithString:kBaseUrl] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if (error || !data) {
             completion(nil, error);
+            return;
         }
         
         NSError *err;
@@ -37,7 +38,6 @@
         }
         
         NSMutableArray<SOUser *> *parsedUsers = [NSMutableArray arrayWithCapacity:responseDictionary.count];
-
         for (NSDictionary *item in responseDictionary[@"items"]) {
             SOUser *user = [[SOUser alloc] initWithDictionary:item];
             NSLog(@"%@", [user description]);

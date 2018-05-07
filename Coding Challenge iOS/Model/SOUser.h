@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "SOUserBadgeCount.h"
 
-@interface SOUser : NSObject
+@interface SOUser : NSObject  <NSCoding>
 
 @property (nonatomic, strong) NSString *displayName;
 @property (nonatomic, strong) NSString *profileImage;

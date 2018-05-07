@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73051E1D209FDF5500FC1B39 /* Persist.m in Sources */ = {isa = PBXBuildFile; fileRef = 73051E1C209FDF5500FC1B39 /* Persist.m */; };
 		73D44DFC208D45C8003B4ADC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D44DFB208D45C8003B4ADC /* AppDelegate.m */; };
 		73D44DFF208D45C8003B4ADC /* SOUsersTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D44DFE208D45C8003B4ADC /* SOUsersTableVC.m */; };
 		73D44E02208D45C8003B4ADC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73D44E00208D45C8003B4ADC /* Main.storyboard */; };
-		73D44E05208D45C8003B4ADC /* Coding_Challenge_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 73D44E03208D45C8003B4ADC /* Coding_Challenge_iOS.xcdatamodeld */; };
 		73D44E07208D45CB003B4ADC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73D44E06208D45CB003B4ADC /* Assets.xcassets */; };
 		73D44E0A208D45CB003B4ADC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73D44E08208D45CB003B4ADC /* LaunchScreen.storyboard */; };
 		73D44E0D208D45CB003B4ADC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D44E0C208D45CB003B4ADC /* main.m */; };
@@ -19,16 +19,20 @@
 		73D44E1D208D53CC003B4ADC /* StackOverflowAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D44E1C208D53CC003B4ADC /* StackOverflowAPI.m */; };
 		73D44E23208D5DFA003B4ADC /* SOUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 73D44E21208D5DFA003B4ADC /* SOUserCell.m */; };
 		73D44E24208D5DFA003B4ADC /* SOUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73D44E22208D5DFA003B4ADC /* SOUserCell.xib */; };
+		8D20B0E32CC44E1064A1D659 /* libPods-Coding Challenge iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE11C5E80F8BE6473DCDE7A5 /* libPods-Coding Challenge iOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		265EF35D2EA998413E33370D /* Pods-Coding Challenge iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coding Challenge iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Coding Challenge iOS/Pods-Coding Challenge iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		5FDAB972B115EC78159BD3B2 /* Pods-Coding Challenge iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coding Challenge iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Coding Challenge iOS/Pods-Coding Challenge iOS.release.xcconfig"; sourceTree = "<group>"; };
+		73051E1B209FDF5500FC1B39 /* Persist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Persist.h; sourceTree = "<group>"; };
+		73051E1C209FDF5500FC1B39 /* Persist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Persist.m; sourceTree = "<group>"; };
 		73D44DF7208D45C8003B4ADC /* Coding Challenge iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coding Challenge iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73D44DFA208D45C8003B4ADC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		73D44DFB208D45C8003B4ADC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		73D44DFD208D45C8003B4ADC /* SOUsersTableVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SOUsersTableVC.h; sourceTree = "<group>"; };
 		73D44DFE208D45C8003B4ADC /* SOUsersTableVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SOUsersTableVC.m; sourceTree = "<group>"; };
 		73D44E01208D45C8003B4ADC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		73D44E04208D45C8003B4ADC /* Coding_Challenge_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Coding_Challenge_iOS.xcdatamodel; sourceTree = "<group>"; };
 		73D44E06208D45CB003B4ADC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73D44E09208D45CB003B4ADC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73D44E0B208D45CB003B4ADC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,6 +46,7 @@
 		73D44E20208D5DFA003B4ADC /* SOUserCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SOUserCell.h; sourceTree = "<group>"; };
 		73D44E21208D5DFA003B4ADC /* SOUserCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SOUserCell.m; sourceTree = "<group>"; };
 		73D44E22208D5DFA003B4ADC /* SOUserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SOUserCell.xib; sourceTree = "<group>"; };
+		CE11C5E80F8BE6473DCDE7A5 /* libPods-Coding Challenge iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Coding Challenge iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,17 +54,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D20B0E32CC44E1064A1D659 /* libPods-Coding Challenge iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		59E92653B0807223F4951140 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				265EF35D2EA998413E33370D /* Pods-Coding Challenge iOS.debug.xcconfig */,
+				5FDAB972B115EC78159BD3B2 /* Pods-Coding Challenge iOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6C4DA5CEA0B513C41542B31D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE11C5E80F8BE6473DCDE7A5 /* libPods-Coding Challenge iOS.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		73299C8E209E455000EA9494 /* Persist */ = {
+			isa = PBXGroup;
+			children = (
+				73051E1B209FDF5500FC1B39 /* Persist.h */,
+				73051E1C209FDF5500FC1B39 /* Persist.m */,
+			);
+			path = Persist;
+			sourceTree = "<group>";
+		};
 		73D44DEE208D45C8003B4ADC = {
 			isa = PBXGroup;
 			children = (
 				73D44DF9208D45C8003B4ADC /* Coding Challenge iOS */,
 				73D44DF8208D45C8003B4ADC /* Products */,
+				59E92653B0807223F4951140 /* Pods */,
+				6C4DA5CEA0B513C41542B31D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,12 +113,12 @@
 				73D44E1A208D5385003B4ADC /* API */,
 				73D44E19208D52FC003B4ADC /* Model */,
 				73D44E1E208D5435003B4ADC /* View */,
+				73299C8E209E455000EA9494 /* Persist */,
 				73D44E00208D45C8003B4ADC /* Main.storyboard */,
 				73D44E06208D45CB003B4ADC /* Assets.xcassets */,
 				73D44E08208D45CB003B4ADC /* LaunchScreen.storyboard */,
 				73D44E0B208D45CB003B4ADC /* Info.plist */,
 				73D44E0C208D45CB003B4ADC /* main.m */,
-				73D44E03208D45C8003B4ADC /* Coding_Challenge_iOS.xcdatamodeld */,
 			);
 			path = "Coding Challenge iOS";
 			sourceTree = "<group>";
@@ -136,6 +170,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 73D44E10208D45CB003B4ADC /* Build configuration list for PBXNativeTarget "Coding Challenge iOS" */;
 			buildPhases = (
+				B8BCD12A74C0AA06FBD50CE1 /* [CP] Check Pods Manifest.lock */,
 				73D44DF3208D45C8003B4ADC /* Sources */,
 				73D44DF4208D45C8003B4ADC /* Frameworks */,
 				73D44DF5208D45C8003B4ADC /* Resources */,
@@ -195,6 +230,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B8BCD12A74C0AA06FBD50CE1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Coding Challenge iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		73D44DF3208D45C8003B4ADC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -202,8 +258,8 @@
 			files = (
 				73D44E23208D5DFA003B4ADC /* SOUserCell.m in Sources */,
 				73D44E18208D4AAA003B4ADC /* SOUserBadgeCount.m in Sources */,
+				73051E1D209FDF5500FC1B39 /* Persist.m in Sources */,
 				73D44E1D208D53CC003B4ADC /* StackOverflowAPI.m in Sources */,
-				73D44E05208D45C8003B4ADC /* Coding_Challenge_iOS.xcdatamodeld in Sources */,
 				73D44DFF208D45C8003B4ADC /* SOUsersTableVC.m in Sources */,
 				73D44E0D208D45CB003B4ADC /* main.m in Sources */,
 				73D44DFC208D45C8003B4ADC /* AppDelegate.m in Sources */,
@@ -345,6 +401,7 @@
 		};
 		73D44E11208D45CB003B4ADC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 265EF35D2EA998413E33370D /* Pods-Coding Challenge iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -363,6 +420,7 @@
 		};
 		73D44E12208D45CB003B4ADC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FDAB972B115EC78159BD3B2 /* Pods-Coding Challenge iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -401,19 +459,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		73D44E03208D45C8003B4ADC /* Coding_Challenge_iOS.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				73D44E04208D45C8003B4ADC /* Coding_Challenge_iOS.xcdatamodel */,
-			);
-			currentVersion = 73D44E04208D45C8003B4ADC /* Coding_Challenge_iOS.xcdatamodel */;
-			path = Coding_Challenge_iOS.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 73D44DEF208D45C8003B4ADC /* Project object */;
 }

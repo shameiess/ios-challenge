@@ -33,4 +33,22 @@
             ];
 }
 
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super init];
+    if (self) {
+        self.displayName = [coder decodeObjectForKey:@"displayName"];
+        self.profileImage = [coder decodeObjectForKey:@"profileImage"];
+        self.badgeCount = [coder decodeObjectForKey:@"badgeCount"];
+    }
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)coder
+{
+    [coder encodeObject:self.displayName forKey:@"displayName"];
+    [coder encodeObject:self.profileImage forKey:@"profileImage"];
+    [coder encodeObject:self.badgeCount forKey:@"badgeCount"];
+}
+
 @end
