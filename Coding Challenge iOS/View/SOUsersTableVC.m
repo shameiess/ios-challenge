@@ -39,6 +39,11 @@ static NSString *const SOUserCellIdentifier = @"SOUserCell";
     self.refreshControl.tintColor = [UIColor colorWithRed:242/255.0 green:127/255.0 blue:51/255.0 alpha:1];
     self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Fetching Stackoverflow users ..."];
     self.table.refreshControl = self.refreshControl;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    self.tableView.contentOffset = CGPointMake(0, -self.refreshControl.frame.size.height);
+    [self.refreshControl beginRefreshing];
     
     [self fetchStackOverFlowUsersFeed];
 }
