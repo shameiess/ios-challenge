@@ -18,13 +18,13 @@ static NSString *const SOUserCellIdentifier = @"SOUserCell";
 
 @interface SOUsersTableVC () <UITableViewDelegate, UITableViewDataSource>
 
-@property (strong, nonatomic) IBOutlet UITableView *table;
 @property (nonatomic) UIRefreshControl *refreshControl;
 @property (nonatomic, strong) NSMutableArray<SOUser *> *users;
 
 @end
 
 @implementation SOUsersTableVC
+@synthesize refreshControl = _refreshControl;
 
 #pragma mark - View Lifecycle
 
@@ -38,7 +38,7 @@ static NSString *const SOUserCellIdentifier = @"SOUserCell";
     [self.refreshControl addTarget:self action:@selector(fetchStackOverFlowUsersFeed) forControlEvents:UIControlEventValueChanged];
     self.refreshControl.tintColor = [UIColor colorWithRed:242/255.0 green:127/255.0 blue:51/255.0 alpha:1];
     self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Fetching Stackoverflow users ..."];
-    self.table.refreshControl = self.refreshControl;
+    self.tableView.refreshControl = self.refreshControl;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -62,7 +62,7 @@ static NSString *const SOUserCellIdentifier = @"SOUserCell";
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.users = [users mutableCopy];
                 [Persist saveSOUsers:users];
-                [self.table reloadData];
+                [self.tableView reloadData];
                 [self.refreshControl endRefreshing];
             });
         }

@@ -33,9 +33,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="https://api.stackexchange.com/2.2/users?site=stackoverflow" id="cdb-Ul-5XC"/>
-                    <connections>
-                        <outlet property="table" destination="sZh-pB-Rfw" id="QdL-aQ-Oau"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sm4-J4-C5f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
